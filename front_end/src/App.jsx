@@ -5,6 +5,7 @@ import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
 import Resume from "./Pages/Resume"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -19,9 +20,8 @@ function App() {
       <Route path="/projects" element = {<Projects/>}/>
       <Route path="/contact" element = {<Contact/>}/>
       <Route path="/resume" element = {<Resume/>}/>
-
     </Routes>
-      
+    <Footer/>
     </>
   )
 }
