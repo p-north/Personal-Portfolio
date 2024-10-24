@@ -4,6 +4,7 @@ import About from "./Pages/About"
 import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
 import Resume from "./Pages/Resume"
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <>
+    <Navbar/>
     <Routes>
       <Route path="/" element = {<Home/>}/>
       <Route path="/about" element = {<About/>}/>
