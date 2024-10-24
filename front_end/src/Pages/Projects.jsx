@@ -2,7 +2,7 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <div>
+    <div className='container mx-auto px-4'>
       Projects Page
     </div>
   )

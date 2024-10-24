@@ -11,7 +11,7 @@ const Footer = () => {
     <div>
       <footer className='absolute bottom-0 w-full bg-white/75 py-8'>
         <div className='container mx-auto px-4'>
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center justify-between text-gray-600'>
                 <p>
                     @2024 Puneet North
                 </p>
