@@ -9,7 +9,7 @@ import XIcon from '@mui/icons-material/X';
 const Footer = () => {
   return (
     <div>
-      <footer className='border-t absolute bottom-0 w-full bg-white/75 py-8 text-sm'>
+      <footer className='border-t w-full bg-white/75 py-8 text-sm'>
         <div className='container mx-auto px-4'>
             <div className='flex flex-grow items-center justify-between text-gray-600'>
                 <p>
