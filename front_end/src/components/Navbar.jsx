@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink } from 'react-router-dom'
-import logo from '../assets/personal_logo.svg'
+import logo from '../assets/Preview.png'
 
 const Navbar = () => {
     // hover class for navbar when user clicks in link
@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className='container mx-auto px-4 py-4 flex justify-between items-center h-20'>
                 <NavLink to = '/'className=' flex flex-shrink-0 items-center text-2xl font-bold'>
                 
-                <img className = 'h-10 w-auto'src={logo} alt="personal_logo" />
+                <img className = 'h-14 w-auto rounded-md'src={logo} alt="personal_logo" />
                 <span className='ml-2'>
                     Puneet North
                 </span>
