@@ -12,16 +12,18 @@ function App() {
  
 
   return (
-    <div className="font-poppins">
-    <Navbar/>
-    <Routes>
-      <Route path="/" element = {<Home/>}/>
-      <Route path="/about" element = {<About/>}/>
-      <Route path="/projects" element = {<Projects/>}/>
-      <Route path="/contact" element = {<Contact/>}/>
-      <Route path="/resume" element = {<Resume/>}/>
-    </Routes>
-    <Footer/>
+    <div className="font-poppins flex flex-col min-h-screen">
+      <Navbar/>
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element = {<Home/>}/>
+          <Route path="/about" element = {<About/>}/>
+          <Route path="/projects" element = {<Projects/>}/>
+          <Route path="/contact" element = {<Contact/>}/>
+          <Route path="/resume" element = {<Resume/>}/>
+        </Routes>
+      </main>
+      <Footer/>
     </div>
   )
 }
