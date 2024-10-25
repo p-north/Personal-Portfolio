@@ -12,7 +12,7 @@ function App() {
  
 
   return (
-    <>
+    <div className="font-poppins">
     <Navbar/>
     <Routes>
       <Route path="/" element = {<Home/>}/>
@@ -22,7 +22,7 @@ function App() {
       <Route path="/resume" element = {<Resume/>}/>
     </Routes>
     <Footer/>
-    </>
+    </div>
   )
 }
 
