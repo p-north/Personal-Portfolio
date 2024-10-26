@@ -13,8 +13,9 @@ const Footer = () => {
         <div className='container mx-auto px-4'>
             <div className='flex flex-grow items-center justify-between text-gray-600'>
                 <p>
-                    &copy; 2024 Puneet North
+                    &copy; 2024 Developed By Puneet North
                 </p>
+                
                 <div className='flex space-x-4'>
                     <NavLink to='https://github.com/p-north' className ='text-gray-600 flex items-center hover:text-red-500'>
                         <GitHubIcon className='w-6 h-6 mx-1'/>
