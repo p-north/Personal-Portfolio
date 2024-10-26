@@ -12,9 +12,12 @@ const Footer = () => {
       <footer className='border-t w-full bg-white/75 py-8 text-sm'>
         <div className='container mx-auto px-4'>
             <div className='flex flex-grow items-center justify-between text-gray-600'>
+              <div className='flex flex-col items-center'>
                 <p>
-                    &copy; 2024 Developed By Puneet North
+                    &copy; 2024 Developed By Puneet North   
                 </p>
+                <p>Made With React + Tailwind</p>
+              </div>
                 
                 <div className='flex space-x-4'>
                     <NavLink to='https://github.com/p-north' className ='text-gray-600 flex items-center hover:text-red-500'>

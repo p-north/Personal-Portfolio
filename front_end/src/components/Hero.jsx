@@ -28,12 +28,12 @@ const Hero = () => {
             </div>
         </div>
         <div className='flex justify-center space-x-4 mt-10 items-center text-lg font-normal'>
-          <button className='bg-gray-900 text-white rounded-md p-3   hover:bg-gray-700 transition-colors shadow-md'>
+          <button className='bg-gray-900 text-white rounded-md p-3   hover:bg-gray-700 shadow-md hover:scale-105 transition-transform'>
             <NavLink to ='/projects'>
               View My Work
             </NavLink>
           </button>
-          <button className='bg-white hover:bg-gray-100 rounded-md p-3  border border-gray-200 transition-colors shadow-md'>
+          <button className='bg-white hover:bg-gray-100 rounded-md p-3  border border-gray-200 shadow-md hover:scale-105 transition-transform'>
           <NavLink to ='/contact'>
               Contact Me
             </NavLink>
