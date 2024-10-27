@@ -39,7 +39,7 @@ const AboutIntro = () => {
             </div>
             </div>
             <div className=''>
-                <img src={profilePic} alt="profilePic" className='h-60 w-60 rounded-md shadow-lg flex-shrink-0 min-w-[240px]border-4 border-gray-200 hover:scale-105 transition-transform brightness-95'/>
+                <img src={profilePic} alt="profilePic" className='h-60 w-60 rounded-md shadow-lg flex-shrink-0 min-w-[240px]border-4 border-gray-200 hover:scale-105 transition-transform brightness-95 cursor-pointer'/>
             </div>
         </div>
       </section>
