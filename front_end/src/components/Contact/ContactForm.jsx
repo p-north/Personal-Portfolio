@@ -102,12 +102,6 @@ const contactFrom = () => {
             >
               Submit
             </button>
-          </form>
-          <button
-            className="bg-gray-900 text-white rounded-md p-3   hover:bg-gray-700 shadow-md hover:scale-105 transition-transform"
-          >
-            Test Toast
-          </button>
           <ToastContainer
             position="top-right"
             autoClose={5000}
@@ -120,6 +114,7 @@ const contactFrom = () => {
             pauseOnHover
             theme="dark"
           />
+          </form>
         </div>
       </section>
     </div>
