@@ -1,41 +1,52 @@
 import React, { useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const contactFrom = () => {
-  const [userName, setUserName] = useState('');
-  const [userEmail, setUserEmail] = useState('');
-  const [userMain, setUserMain] = useState('');
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userMain, setUserMain] = useState("");
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // email js variables setup
-    const service_id = 'service_cyh3edn';
-    const template_id = 'template_tekosi6';
-    const public_key = 'UvgdtVMfnw1Zbvp9N'
+    const service_id = "service_cyh3edn";
+    const template_id = "template_tekosi6";
+    const public_key = "UvgdtVMfnw1Zbvp9N";
 
     //email js object with template params
     const templateParams = {
       from_name: userName,
       from_email: userEmail,
-      to_name: 'Puneet',
+      to_name: "Puneet",
       message: userMain,
     };
 
     //send the email using email js
-    emailjs.send(service_id, template_id, templateParams, public_key)
-      .then((response) =>{
-        console.log('Email sent succesfully', response);
-        setUserName('');
-        setUserEmail('');
-        setUserMain('');
+    emailjs
+      .send(service_id, template_id, templateParams, public_key)
+      .then((response) => {
+        toast.success("Message sent succesfully!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        console.log("Email sent succesfully", response);
+        setUserName("");
+        setUserEmail("");
+        setUserMain("");
       })
-      .catch((error)=>{
-        console.error('Error sending email:', error);
+      .catch((error) => {
+        console.error("Error sending email:", error);
       });
-
   };
-
 
   return (
     <div>
@@ -46,7 +57,10 @@ const contactFrom = () => {
             Send Me A Message!
           </h2>
 
-          <form onSubmit={handleSubmit} className="p-10 flex flex-col w-full max-w-lg shadow-md rounded-lg">
+          <form
+            onSubmit={handleSubmit}
+            className="p-10 flex flex-col w-full max-w-lg shadow-md rounded-lg"
+          >
             <label htmlFor="name" className="text-lg font-medium mb-1">
               Name
             </label>
@@ -66,7 +80,7 @@ const contactFrom = () => {
               type="text"
               name="usrEmail"
               placeholder="Your Email"
-              value = {userEmail}
+              value={userEmail}
               required
               onChange={(e) => setUserEmail(e.target.value)}
             />
@@ -80,7 +94,7 @@ const contactFrom = () => {
               placeholder="Write something..."
               value={userMain}
               required
-              onChange={(e)=> setUserMain(e.target.value)}
+              onChange={(e) => setUserMain(e.target.value)}
             ></textarea>
             <button
               type="submit"
@@ -89,6 +103,23 @@ const contactFrom = () => {
               Submit
             </button>
           </form>
+          <button
+            className="bg-gray-900 text-white rounded-md p-3   hover:bg-gray-700 shadow-md hover:scale-105 transition-transform"
+          >
+            Test Toast
+          </button>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </section>
     </div>
