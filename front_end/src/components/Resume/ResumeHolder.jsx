@@ -21,12 +21,14 @@ const ResumeHolder = () => {
                     <Page pageNumber={1}/>
                  </Document>
                 </div>
-
             </div>
-
+            <div className='flex justify-center mt-8'>
+              <button className='bg-gray-900 text-white rounded-md p-3 hover:bg-gray-700 hover:scale-105 transition-transform shadow-md'>
+                <a href={resume} download={resume}>Download Resume</a>
+              </button>
+            </div>
           </div>
         </section>
-      
     </div>
   )
 }
