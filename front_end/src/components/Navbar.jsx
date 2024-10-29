@@ -22,8 +22,8 @@ const Navbar = () => {
                     <nav className='flex space-x-6 text-lg font-normal items-center'>
                         <NavLink to= '/about' className = {hoverClass}>About</NavLink>
                         <NavLink to= '/projects' className={hoverClass}>Projects</NavLink>
-                        <NavLink to= '/contact' className={hoverClass}>Contact</NavLink>
                         <NavLink to= '/resume' className={hoverClass}>Resume</NavLink>
+                        <NavLink to= '/contact' className={hoverClass}>Contact</NavLink>
                     </nav>
                 </div>
             </div>
