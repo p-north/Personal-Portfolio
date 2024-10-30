@@ -11,7 +11,7 @@ const Footer = () => {
     <div>
       <footer className='border-t w-full bg-white/75 py-8 text-sm'>
         <div className='container mx-auto px-4'>
-            <div className='flex flex-grow items-center justify-between text-gray-600'>
+            <div className='flex flex-grow items-center justify-between text-gray-600 flex-col md:flex-row'>
               <div className='flex flex-col items-center'>
                 <p>
                     &copy; 2024 Developed By Puneet North   
@@ -19,7 +19,7 @@ const Footer = () => {
                 <p>Made With React + Tailwind</p>
               </div>
                 
-                <div className='flex space-x-4'>
+                <div className='flex space-x-4 mt-4 md:mt-0'>
                     <NavLink to='https://github.com/p-north' className ='text-gray-600 flex items-center hover:text-red-500'>
                         <GitHubIcon className='w-6 h-6 mx-1'/>
                         <span>Github</span>
