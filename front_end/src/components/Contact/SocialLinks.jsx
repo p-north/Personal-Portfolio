@@ -13,17 +13,17 @@ const socialLinks = () => {
             {/* Use w-1/4 for better responsiveness */}
             <img src={emoji} alt="emoji.png" className= 'h-auto w-1/4' />
             <h1 className='text-3xl font-bold  md:text-4xl'>Connect With Me On</h1>
-            <div className='flex space-x-4 mx-auto mt-4 py-10 scale-150'>
-                    <NavLink to='https://github.com/p-north' className='flex items-center hover:text-red-500 hover:scale-110 transition-transform'>
+            <div className='flex space-x-4 mx-auto mt-4 py-10 md:scale-150'>
+                    <NavLink to='https://github.com/p-north' className='flex items-center hover:text-red-500 hover:scale-110 transition-transform text-lg md:text-xl'>
                         <GitHubIcon className='w-6 h-6 mx-1'/>
                         <span>Github</span>
                     </NavLink>
-                    <NavLink to= 'https://www.linkedin.com/in/puneet-north/' className= 'flex items-center hover:text-blue-500 hover:scale-110 transition-transform'>
+                    <NavLink to= 'https://www.linkedin.com/in/puneet-north/' className= 'flex items-center hover:text-blue-500 hover:scale-110 transition-transform text-lg md:text-xl'>
                         <LinkedInIcon className='w-6 h-6 mx-1'/>
                         <span>LinkedIn</span>
                     </NavLink>
-                    <NavLink to = 'https://x.com/iXpert_North' className= 'flex items-center hover:text-black hover:scale-110 transition-transform hover:font-semibold'>
-                        <XIcon className='w-6 h-6 mx-1'/>
+                    <NavLink to = 'https://x.com/iXpert_North' className= 'flex items-center hover:text-black hover:scale-110 transition-transform hover:font-semibold text-lg md:text-xl'>
+                        <XIcon className='w-6 h-6 mx-1 '/>
                         <span>Twitter</span>
                     </NavLink>
                 </div> 
