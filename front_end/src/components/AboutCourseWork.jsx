@@ -64,7 +64,7 @@ const AboutCourseWork = () => {
 
                             </div>
                             <div className='flex text-center bg-white hover:bg-gray-900 hover:text-white rounded-md p-3  border border-gray-200 shadow-md text-black hover:scale-105 transition-transform'>
-                                <NavLink to ='/' className = 'w-full'>
+                                <NavLink to ={element.courseLink} className = 'w-full'>
                                     View Course Outline
                                 </NavLink>
                             </div>
