@@ -1,2 +1,2 @@
 # p-north.github.io
-[Website Link](https://puneetnorth.vercel.app/)
+[Portfolio Link](https://puneetnorth.vercel.app/)
