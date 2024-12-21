@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CraveItLogo from "../assets/project1.png";
 import TransitLogo from "../assets/project2.png";
-import JobsLogo from "../assets/project3.jpg";
+import Mindstream from "../assets/minstreamai.png"
 
 const BriefProjects = () => {
   const projects = [
@@ -11,6 +11,7 @@ const BriefProjects = () => {
       title: "CraveIt",
       description: "One-stop food finder app for all your cravings!",
       imag: CraveItLogo,
+      type: "View Github",
       link: "https://github.com/p-north/StormHacks2024_CraveIt",
     },
     {
@@ -18,15 +19,21 @@ const BriefProjects = () => {
       title: "Transit Planner",
       description: "Transit route planner for those last minute travel plans!",
       imag: TransitLogo,
+      type: "View Github",
       link: "https://github.com/mini9yo/FallHacks",
     },
     {
       id: 3,
-      title: "Jobs Board App",
+      date: "Sept 2024",
+      title: "Mindstream AI",
       description:
-        "Job board site where users can view or add various React dev roles!",
-      imag: JobsLogo,
-      link: "https://github.com/p-north/Job_Listings_Site",
+        "Study tool designed for university students craming for exams!.",
+      imag: Mindstream,
+      key1: "React",
+      key2: "Firebase",
+      key3: "Express.js",
+      type: "View Demo",
+      link: "https://mindstreamai.onrender.com/",
     },
   ];
   return (
@@ -55,9 +62,9 @@ const BriefProjects = () => {
                     </h3>
                     <p className="text-gray-600 mb-4">{element.description}</p>
                     <div className="flex text-center bg-white hover:bg-gray-900 hover:text-white rounded-md p-3  border border-gray-200 shadow-md text-black hover:scale-105 transition-transform">
-                      <NavLink to={element.link} className="w-full">
-                        View On Github
-                      </NavLink>
+                      <a href={element.link} className="w-full" target="_blank">
+                        {element.type}
+                      </a>
                     </div>
                   </div>
                 </div>

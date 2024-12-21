@@ -35,9 +35,6 @@ const Navbar = () => {
         </div>
         {/* Desktop */}
         <nav className="md:flex hidden space-x-6 text-lg font-normal items-center">
-          <NavLink to="/about" className={hoverClass}>
-            About
-          </NavLink>
           <NavLink to="/projects" className={hoverClass}>
             Projects
           </NavLink>
