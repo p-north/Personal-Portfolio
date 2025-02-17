@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import resume from '../../assets/Puneet_Resume.pdf';
+import resume from '../../assets/Puneet_Resume_SDE.pdf';
 import { Document, Page } from 'react-pdf';
 import {pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
