@@ -29,6 +29,15 @@ const Navbar = () => {
         </div>
         {/* Desktop */}
         <nav className="md:flex hidden space-x-6 text-lg font-normal items-center">
+          <a href="#about" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
+            About
+          </a>
+          <a href="#education" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
+            Education
+          </a>
+          <a href="#experience" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
+            Experience
+          </a>
           <a href="#projects" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
             Projects
           </a>
@@ -51,6 +60,12 @@ const Navbar = () => {
         <nav className="md:hidden flex flex-col p-4 space-y-2 mx-auto">
           <a href="#about" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform" onClick={toggleNavbar}>
             About
+          </a>
+          <a href="#education" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform" onClick={toggleNavbar}>
+            Education
+          </a>
+          <a href="#experience" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform" onClick={toggleNavbar}>
+            Experience
           </a>
           <a href="#projects" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform" onClick={toggleNavbar}>
             Projects

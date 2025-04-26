@@ -4,6 +4,8 @@ import Contact from "./Pages/Contact"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
+import ExperienceTimeline from './components/Experience/ExperienceTimeline'
+import EducationCards from './components/Education/EducationCards'
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
         {/* Add IDs for anchor navigation */}
         <section id="home" className="container mx-auto px-4"><Hero/></section>
         <section id="about"><About/></section>
+        <section id="education" className="container mx-auto px-4"><EducationCards/></section>
+        <section id="experience" className="container mx-auto px-4"><ExperienceTimeline/></section>
         <section id="projects"><Projects/></section>
-        {/* <section id="resume"><Resume/></section> */}
         <section id="contact"><Contact/></section>
       </main>
       <Footer/>

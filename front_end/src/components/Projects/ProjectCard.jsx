@@ -92,7 +92,7 @@ const ProjectCard = () => {
     {
       id: 7,
       date: "Apr 2025",
-      title: "FoodConnect Platform",
+      title: "FoodConnect",
       description:
         "FoodConnect is a dynamic web platform designed to bridge the gap between food donors and recipients. It offers a streamlined marketplace for food donations, a real-time chat system powered by web sockets, and advanced filtering tools to ensure equitable access to food for individuals and communities in need.",
       imag: foodConnect,
