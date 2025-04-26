@@ -113,7 +113,8 @@ const ProjectCard = () => {
     <div>
       <section className="py-20 bg-gray-50">
         <div className="flex flex-col items-center mx-auto justify-center px-4 sm:px-6 max-w-7xl lg:px-8">
-          <h1 className="text-3xl font-bold md:text-4xl mb-10">My Projects</h1>
+          <h1 className="text-3xl font-bold md:text-4xl mb-3">My Projects</h1>
+          <div className="w-20 h-1 bg-gray-800 mx-auto rounded-full mb-12"></div>
           {/* Projects Holder */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scale-90">
             {projects.map(function (element, idx) {

@@ -41,7 +41,8 @@ const EducationCards = () => {
   return (
     <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="flex flex-col items-center mx-auto justify-center px-4 sm:px-6 max-w-7xl lg:px-8">
-        <h1 className="text-3xl font-bold md:text-4xl mb-12">Education & Certifications</h1>
+        <h1 className="text-3xl font-bold md:text-4xl mb-3">Education & Certifications</h1>
+        <div className="w-20 h-1 bg-gray-800 mx-auto rounded-full mb-12"></div>
         
         {/* Main Education Card */}
         <div className="w-full max-w-4xl mb-16">

@@ -8,40 +8,40 @@ const ExperienceTimeline = () => {
   const experiences = [
     {
       id: 1,
-      title: "Software Developer Intern",
-      company: "Tech Solutions Inc.",
-      date: "May 2024 - August 2024",
-      description: "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to implement new features and improve existing functionality.",
-      skills: ["React", "Node.js", "Firebase"],
-      icon: "work",
+      title: "Full Stack Developer",
+      company: "CJSF 90.1FM",
+      date: "Apr 2025 - Present",
+      description: "I maintain and optimize frontend/backend services, ensuring high availability and data integrity, while collaborating closely with content and technical teams to align web development with user experience and business goals.",
+      skills: ["Next.js", "MySQL", "Strapi"],
+      icon: "volunteer",
     },
     {
       id: 2,
-      title: "Teaching Assistant",
-      company: "Simon Fraser University",
-      date: "January 2024 - April 2024",
-      description: "Assisted professor in teaching introductory programming course. Conducted office hours and lab sessions to help students with assignments and projects.",
-      skills: ["Python", "C++", "Teaching"],
-      icon: "school",
+      title: "Sales Colleague",
+      company: "JYSK Canada",
+      date: "Jul 2022 - Sept 2023",
+      description: "Assisted customers with product selection, maintained accurate inventory records, and optimized store layouts, leading to a 15% rise in positive feedback and a 10% reduction in stock discrepancies.",
+      skills: ["Teamwork", "Communication", "Customer Service"],
+      icon: "work",
     },
-    {
-      id: 3,
-      title: "Frontend Developer",
-      company: "Student Project",
-      date: "September 2023 - December 2023",
-      description: "Led frontend development for a student project creating a community platform. Implemented responsive design and user authentication features.",
-      skills: ["React", "Tailwind CSS", "JavaScript"],
-      icon: "code",
-    },
-    {
-      id: 4,
-      title: "Volunteer Developer",
-      company: "Nonprofit Organization",
-      date: "June 2023 - August 2023",
-      description: "Volunteered to build a website for a local nonprofit organization. Designed and implemented a donation system and content management system.",
-      skills: ["WordPress", "PHP", "UI/UX Design"],
-      icon: "volunteer",
-    },
+    // {
+    //   id: 3,
+    //   title: "Frontend Developer",
+    //   company: "Student Project",
+    //   date: "September 2023 - December 2023",
+    //   description: "Led frontend development for a student project creating a community platform. Implemented responsive design and user authentication features.",
+    //   skills: ["React", "Tailwind CSS", "JavaScript"],
+    //   icon: "code",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Volunteer Developer",
+    //   company: "Nonprofit Organization",
+    //   date: "June 2023 - August 2023",
+    //   description: "Volunteered to build a website for a local nonprofit organization. Designed and implemented a donation system and content management system.",
+    //   skills: ["WordPress", "PHP", "UI/UX Design"],
+    //   icon: "volunteer",
+    // },
   ];
 
   const getIcon = (iconType) => {
@@ -63,7 +63,8 @@ const ExperienceTimeline = () => {
     <div>
       <section className="py-20 bg-gray-50">
         <div className="flex flex-col items-center mx-auto justify-center px-4 sm:px-6 max-w-7xl lg:px-8">
-          <h1 className="text-3xl font-bold md:text-4xl mb-12">My Experience</h1>
+          <h1 className="text-3xl font-bold md:text-4xl mb-3">My Experience</h1>
+          <div className="w-20 h-1 bg-gray-800 mx-auto rounded-full mb-12"></div>
           
           <div className="relative w-full max-w-4xl">
             {/* Vertical line */}
