@@ -54,7 +54,7 @@ const AboutSkills = () => {
         <div className="p-3 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors">
           <img src={skill.icon} alt={skill.name} className='h-10 w-10' />
         </div>
-        <h3 className='mt-3 text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors'>{skill.name}</h3>
+        <h3 className='mt-3 text-sm font-bold text-gray-700 group-hover:text-gray-900 transition-colors'>{skill.name}</h3>
       </motion.div>
     ));
   };
@@ -69,7 +69,7 @@ const AboutSkills = () => {
 
   return (
     <div>
-      <section className='py-16 bg-gradient-to-b from-gray-50 to-white'>
+      <section className='py-16 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <div className='flex justify-center mb-10'>
             <div className="text-center">
@@ -80,7 +80,7 @@ const AboutSkills = () => {
           
           {/* Tab Navigation - Always horizontal */}
           <div className='flex justify-center mb-8'>
-            <div className='flex flex-row p-1.5 bg-gray-100 rounded-xl shadow-inner gap-1 md:gap-2 w-full max-w-md'>
+            <div className='flex flex-row p-2 bg-gray-100 rounded-xl shadow-inner gap-1 md:gap-2 w-full max-w-3xl'>
               <button 
                 onClick={() => setActiveTab('languages')} 
                 className={getTabClass('languages')}
@@ -106,7 +106,7 @@ const AboutSkills = () => {
           </div>
           
           {/* Tab Content with improved visuals and animations */}
-          <div className='bg-white rounded-2xl shadow-lg p-6 md:p-10 max-w-5xl mx-auto min-h-[450px] border border-gray-100'>
+          <div className='bg-white rounded-2xl shadow-lg p-6 md:p-10 max-w-5xl mx-auto min-h-auto border border-gray-100'>
             <AnimatePresence mode="wait">
               {activeTab === 'languages' && (
                 <motion.div
