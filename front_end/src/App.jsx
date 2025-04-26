@@ -1,26 +1,21 @@
-import { Route, Routes } from "react-router-dom"
-import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
-import Resume from "./Pages/Resume"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-
+import Hero from "./components/Hero"
 
 function App() {
- 
-
   return (
     <div className="font-poppins flex flex-col min-h-screen">
       <Navbar/>
       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element = {<Home/>}/>
-          <Route path="/projects" element = {<Projects/>}/>
-          <Route path="/contact" element = {<Contact/>}/>
-          <Route path="/resume" element = {<Resume/>}/>
-        </Routes>
+        {/* Add IDs for anchor navigation */}
+        <section id="home" className="container mx-auto px-4"><Hero/></section>
+        <section id="about"><About/></section>
+        <section id="projects"><Projects/></section>
+        {/* <section id="resume"><Resume/></section> */}
+        <section id="contact"><Contact/></section>
       </main>
       <Footer/>
     </div>

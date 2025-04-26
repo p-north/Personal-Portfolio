@@ -1,10 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
-
-
 
 const Footer = () => {
   return (
@@ -20,18 +17,18 @@ const Footer = () => {
               </div>
                 
                 <div className='flex space-x-4 mt-4 md:mt-0'>
-                    <NavLink to='https://github.com/p-north' className ='text-gray-600 flex items-center hover:text-red-500'>
+                    <a href='https://github.com/p-north' className ='text-gray-600 flex items-center hover:text-red-500' target="_blank" rel="noopener noreferrer">
                         <GitHubIcon className='w-6 h-6 mx-1'/>
                         <span>Github</span>
-                    </NavLink>
-                    <NavLink to= 'https://www.linkedin.com/in/puneet-north/' className= 'text-gray-600 flex items-center hover:text-blue-500'>
+                    </a>
+                    <a href= 'https://www.linkedin.com/in/puneet-north/' className= 'text-gray-600 flex items-center hover:text-blue-500' target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon className='w-6 h-6 mx-1'/>
                         <span>LinkedIn</span>
-                    </NavLink>
-                    <NavLink to = 'https://x.com/iXpert_North' className= 'text-gray-600 flex items-center hover:text-black'>
+                    </a>
+                    <a href = 'https://x.com/iXpert_North' className= 'text-gray-600 flex items-center hover:text-black' target="_blank" rel="noopener noreferrer">
                         <XIcon className='w-6 h-6 mx-1'/>
                         <span>Twitter</span>
-                    </NavLink>
+                    </a>
                 </div>
             </div>
         </div>
