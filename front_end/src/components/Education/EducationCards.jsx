@@ -9,14 +9,13 @@ const EducationCards = () => {
     {
       id: 1,
       institution: "Simon Fraser University",
-      degree: "Bachelor of Science in Computing Science",
+      degree: "Bachelor of Science in Computer Science",
       concentration: "Artificial Intelligence",
-      duration: "2022 - Present",
-      gpa: "3.8/4.0",
+      duration: "2023 - 2027",
+      gpa: "3.60",
       logo: sfuLogo,
       achievements: [
-        "Dean's Honor Roll - 3 Consecutive Semesters",
-        "Undergraduate Research Assistant",
+        "BC Achievement Scholarship",
         "Computing Science Student Society Member"
       ]
     }
@@ -25,17 +24,17 @@ const EducationCards = () => {
   const certifications = [
     {
       id: 1,
-      name: "Machine Learning Specialization",
-      issuer: "Coursera & Stanford University",
-      date: "June 2023",
-      skills: ["Neural Networks", "TensorFlow", "Deep Learning"]
+      name: "SQL (Intermediate) Certificate",
+      issuer: "HackeRank",
+      date: "Feb 2025",
+      skills: ["SQL", "MySQL", "PostgreSQL"]
     },
     {
-      id: 2,
-      name: "Full-Stack Web Development",
-      issuer: "Udemy",
-      date: "January 2023",
-      skills: ["React", "Node.js", "MongoDB"]
+        id: 2,
+        name: "Machine Learning",
+        issuer: "MathWorks",
+        date: "Dec 2024",
+        skills: ["Neural Networks", "MatLab", "Machine Learning"]
     }
   ];
   
@@ -53,7 +52,7 @@ const EducationCards = () => {
             >
               <div className="md:flex">
                 <div className="md:flex-shrink-0 bg-gray-800 flex items-center justify-center p-6">
-                  <img className="h-40 w-40 rounded-lg object-cover" src={edu.logo} alt={edu.institution} />
+                  <img className="h-40 w-40 rounded-full object-cover" src={edu.logo} alt={edu.institution} />
                 </div>
                 <div className="p-8 flex-1">
                   <div className="flex justify-between items-start">
