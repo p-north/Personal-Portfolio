@@ -1,97 +1,163 @@
-import React from 'react'
-
-
+import React, { useState } from 'react'
+import CodeIcon from '@mui/icons-material/Code';
+import WebIcon from '@mui/icons-material/Web';
+import BuildIcon from '@mui/icons-material/Build';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const AboutSkills = () => {
+  // State to track the active tab
+  const [activeTab, setActiveTab] = useState('languages');
+
+  // Define skills by category
+  const skills = {
+    languages: [
+      { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
+      { name: "C++", icon: "https://skillicons.dev/icons?i=cpp" },
+      { name: "C", icon: "https://skillicons.dev/icons?i=c" },
+      { name: "JavaScript", icon: "https://skillicons.dev/icons?i=js" },
+      { name: "TypeScript", icon: "https://skillicons.dev/icons?i=ts" },
+      { name: "HTML", icon: "https://skillicons.dev/icons?i=html" },
+      { name: "CSS", icon: "https://skillicons.dev/icons?i=css" },
+    ],
+    frameworks: [
+      { name: "React.js", icon: "https://skillicons.dev/icons?i=react" },
+      { name: "Next.js", icon: "https://skillicons.dev/icons?i=next" },
+      { name: "Node.js", icon: "https://skillicons.dev/icons?i=nodejs" },
+      { name: "Express.js", icon: "https://skillicons.dev/icons?i=expressjs" },
+      { name: "FastAPI", icon: "https://skillicons.dev/icons?i=fastapi" },
+      { name: "Tailwind", icon: "https://skillicons.dev/icons?i=tailwind" },
+    ],
+    tools: [
+      { name: "Postman", icon: "https://skillicons.dev/icons?i=postman" },
+      { name: "VsCode", icon: "https://skillicons.dev/icons?i=vscode" },
+      { name: "AWS", icon: "https://skillicons.dev/icons?i=aws" },
+      { name: "Firebase", icon: "https://skillicons.dev/icons?i=firebase" },
+      { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
+      { name: "MySQL", icon: "https://skillicons.dev/icons?i=mysql" },
+      { name: "PostgreSQL", icon: "https://skillicons.dev/icons?i=postgresql" },
+      { name: "Docker", icon: "https://skillicons.dev/icons?i=docker" },
+      { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
+      { name: "GitLab", icon: "https://skillicons.dev/icons?i=gitlab" },
+    ]
+  };
+
+  // Function to render skill cards with improved design
+  const renderSkillCards = (skillArray) => {
+    return skillArray.map((skill, index) => (
+      <motion.div 
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: index * 0.05 }}
+        className='group p-4 border border-gray-100 flex flex-col items-center rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-200 transform hover:translate-y-[-5px]'
+      >
+        <div className="p-3 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors">
+          <img src={skill.icon} alt={skill.name} className='h-10 w-10' />
+        </div>
+        <h3 className='mt-3 text-sm font-bold text-gray-700 group-hover:text-gray-900 transition-colors'>{skill.name}</h3>
+      </motion.div>
+    ));
+  };
+
+  // Function for tab indicators with improved styling - adjusted for horizontal layout
+  const getTabClass = (tabName) => {
+    return `relative flex items-center justify-center gap-1 py-2 px-3 md:px-6 rounded-lg transition-all font-medium text-xs md:text-base flex-1
+      ${activeTab === tabName 
+        ? 'bg-gradient-to-r from-gray-800 to-gray-700 text-white shadow-md' 
+        : 'bg-white text-gray-700 hover:bg-gray-50'}`;
+  };
+
   return (
     <div>
-      <section className='py-20 bg-gray-50'>
-        <div className='flex justify-center mb-10'>
-            <h1 className='text-3xl font-bold  md:text-4xl'>Development Skills</h1>
+      <section className='py-16 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <div className='flex justify-center mb-10'>
+            <div className="text-center">
+              <h1 className='text-3xl font-bold md:text-4xl mb-3'>Technical Skills</h1>
+              <div className="w-20 h-1 bg-gray-800 mx-auto rounded-full"></div>
+            </div>
+          </div>
+          
+          {/* Tab Navigation - Always horizontal */}
+          <div className='flex justify-center mb-8'>
+            <div className='flex flex-row p-2 bg-gray-100 rounded-xl shadow-inner gap-1 md:gap-2 w-full max-w-3xl'>
+              <button 
+                onClick={() => setActiveTab('languages')} 
+                className={getTabClass('languages')}
+              >
+                <CodeIcon fontSize="small" className="hidden md:block" /> 
+                <span className="whitespace-nowrap">Languages</span>
+              </button>
+              <button 
+                onClick={() => setActiveTab('frameworks')} 
+                className={getTabClass('frameworks')}
+              >
+                <WebIcon fontSize="small" className="hidden md:block" /> 
+                <span className="whitespace-nowrap">Frameworks</span>
+              </button>
+              <button 
+                onClick={() => setActiveTab('tools')} 
+                className={getTabClass('tools')}
+              >
+                <BuildIcon fontSize="small" className="hidden md:block" /> 
+                <span className="whitespace-nowrap">Tools</span>
+              </button>
+            </div>
+          </div>
+          
+          {/* Tab Content with improved visuals and animations */}
+          <div className='bg-white rounded-2xl shadow-lg p-6 md:p-10 max-w-5xl mx-auto min-h-auto border border-gray-100'>
+            <AnimatePresence mode="wait">
+              {activeTab === 'languages' && (
+                <motion.div
+                  key="languages"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <h2 className='text-xl font-semibold mb-6 text-gray-800 pb-2 border-b border-gray-100'>Programming Languages</h2>
+                  <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6'>
+                    {renderSkillCards(skills.languages)}
+                  </div>
+                </motion.div>
+              )}
+              
+              {activeTab === 'frameworks' && (
+                <motion.div
+                  key="frameworks"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <h2 className='text-xl font-semibold mb-6 text-gray-800 pb-2 border-b border-gray-100'>Frameworks & Libraries</h2>
+                  <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6'>
+                    {renderSkillCards(skills.frameworks)}
+                  </div>
+                </motion.div>
+              )}
+              
+              {activeTab === 'tools' && (
+                <motion.div
+                  key="tools"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <h2 className='text-xl font-semibold mb-6 text-gray-800 pb-2 border-b border-gray-100'>Developer Tools</h2>
+                  <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6'>
+                    {renderSkillCards(skills.tools)}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
-        {/* Grid with icons */}
-        <div className='flex justify-center scale-90'>
-        <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8'>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                <img src="https://skillicons.dev/icons?i=python" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Python</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=cpp" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>C++</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=c" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>C</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=js" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>JavaScript</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=html" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>HTML</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=css" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>CSS</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=react" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>React.js</h1>
-            </div>
-            
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=nodejs" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Node.js</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=expressjs" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Express.js</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=tailwind" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Tailwind</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=postman" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Postman</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=vscode" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>VsCode</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=figma" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Figma</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=git" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Git</h1>
-            </div>
-            <div className='hover:shadow-2xl p-2 border border-gray-400 flex flex-col items-center hover:scale-110 transition-transform shadow-md text-black bg-white rounded-3xl cursor-pointer'>
-                {/* <SiCplusplus className='text-8xl'/> */}
-                <img src="https://skillicons.dev/icons?i=github" alt="cpp" className='h-20 mt-2' />
-                <h1 className='mt-4 font-semibold'>Github</h1>
-            </div>
-            
-        
-        </div>
-        </div>
-
       </section>
     </div>
   )

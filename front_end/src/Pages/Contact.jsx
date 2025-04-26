@@ -5,7 +5,7 @@ import SocialLinks from "../components/Contact/SocialLinks";
 const Contact = () => {
   return (
     <div className="container mx-auto px-4">
-      <SocialLinks />
+      {/* <SocialLinks /> */}
       <ContactForm />
     </div>
   );

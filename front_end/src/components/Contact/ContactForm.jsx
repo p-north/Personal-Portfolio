@@ -50,7 +50,7 @@ const contactFrom = () => {
 
   return (
     <div>
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="flex flex-col items-center mx-auto justify-center px-4 sm:px-6 max-w-7xl lg:px-8">
           <h1 className="text-3xl font-bold md:text-4xl">Any Questions?</h1>
           <h2 className="text-xl font-medium md:text-2xl mt-5">

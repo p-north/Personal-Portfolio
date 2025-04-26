@@ -1,7 +1,5 @@
 import React from 'react'
 import sfuLogo from '../assets/sfu.jpg'
-import { NavLink } from 'react-router-dom'
-
 
 const AboutCourseWork = () => {
   const courses = [
@@ -64,9 +62,9 @@ const AboutCourseWork = () => {
 
                             </div>
                             <div className='flex text-center bg-white hover:bg-gray-900 hover:text-white rounded-md p-3  border border-gray-200 shadow-md text-black hover:scale-105 transition-transform'>
-                                <NavLink to ={element.courseLink} className = 'w-full'>
+                                <a href={element.courseLink} className = 'w-full' target="_blank" rel="noopener noreferrer">
                                     View Course Outline
-                                </NavLink>
+                                </a>
                             </div>
                         </div>
                 </div>

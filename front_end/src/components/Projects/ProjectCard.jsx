@@ -3,6 +3,9 @@ import proj1Image from "../../assets/project1.png";
 import TransitLogo from "../../assets/project2.png";
 import JobsLogo from "../../assets/project3.jpg";
 import Mindstream from "../../assets/minstreamai.png"
+import rottify from "../../assets/rottify.jpg"
+import clickRegret from "../../assets/click_regret.png"
+import foodConnect from "../../assets/foodconnect.png"
 
 
 
@@ -10,7 +13,7 @@ const ProjectCard = () => {
   const projects = [
     {
       id: 1,
-      date: "Sept 2024",
+      date: "Dec 2024",
       title: "Mindstream AI",
       description:
         "Mindstream AI is an innovative web platform designed to help students efficiently generate study resources such as flashcards, quizzes, podcasts, summaries, and personalized study plans based on uploaded lecture notes.",
@@ -60,18 +63,65 @@ const ProjectCard = () => {
       type: "View On Github",
       link: "https://github.com/p-north/Job_Listings_Site",
     },
-  ];
+    {
+      id: 5,
+      date: "Feb 2025",
+      title: "Rottify: AI-Powered Text-to-Video Generator",
+      description:
+        "Turns text into viral-ready, high-energy microlearning videos using AI. Automatically create engaging content with AI voiceovers, captions, and meme-like visuals.",
+      imag: rottify,
+      key1: "Supabase",
+      key2: "Docker",
+      key3: "Next.js",
+      type: "View On Github",
+      link: "https://github.com/p-north/Rottify-AI-Text-Video",
+    },
+    {
+      id: 6,
+      date: "Mar 2025",
+      title: "Click AND Regret Minesweeper",
+      description:
+        "An interactive Minesweeper-inspired game where users pick a difficulty (easy, medium, hard) and click tiles. Land on green tiles to progress; land on red tiles and answer a behavioral or LeetCode question — with surprise jump scares along the way!",
+      imag: clickRegret,
+      key1: "MySQL",
+      key2: "AWS S3",
+      key3: "FastAPI",
+      type: "View On Github",
+      link: "https://github.com/p-north/Click-Regret---Minesweeper-Game",
+    },
+    {
+      id: 7,
+      date: "Apr 2025",
+      title: "FoodConnect",
+      description:
+        "FoodConnect is a dynamic web platform designed to bridge the gap between food donors and recipients. It offers a streamlined marketplace for food donations, a real-time chat system powered by web sockets, and advanced filtering tools to ensure equitable access to food for individuals and communities in need.",
+      imag: foodConnect,
+      key1: "PostgreSQL",
+      key2: "AWS (S3, RDS)",
+      key3: "Express.js",
+      type: "View On Github",
+      link: "https://github.com/Priyanshsarvaiya/Food-Connect",
+    },
+    
+  ].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA; // Sort in descending order
+  }
+  );
   return (
     <div>
       <section className="py-20 bg-gray-50">
         <div className="flex flex-col items-center mx-auto justify-center px-4 sm:px-6 max-w-7xl lg:px-8">
-          <h1 className="text-3xl font-bold md:text-4xl mb-10">My Projects</h1>
+          <h1 className="text-3xl font-bold md:text-4xl mb-3">My Projects</h1>
+          <div className="w-20 h-1 bg-gray-800 mx-auto rounded-full mb-12"></div>
           {/* Projects Holder */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scale-90">
             {projects.map(function (element, idx) {
               return (
                 <div
                   key={idx}
+                  id={element.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 w-full"
                 >
                   <img
