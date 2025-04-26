@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/Preview.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import resume from "../assets/Puneet_Resume_SDE.pdf"
 
 const Navbar = () => {
   const [isOpen, setIsopen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
           <a href="#projects" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
             Projects
           </a>
-          <a href="#resume" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
+          <a href={resume} className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
             Resume
           </a>
           <a href="#contact" className="text-black hover:bg-gray-700 hover:text-white rounded-md p-2 hover:scale-105 transition-transform">
