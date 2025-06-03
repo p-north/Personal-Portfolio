@@ -8,6 +8,15 @@ const ExperienceTimeline = () => {
   const experiences = [
     {
       id: 1,
+      title: "Web System Adminstrator",
+      company: "SFU CSSS",
+      date: "May 2025 - Present",
+      description: "Maintain and optimize backend services for new.sfucsss.org website and co-lead dev meetings to plan tasks, review PRs, and onboard contributors serving a student society of 900+ members.",
+      skills: ["Nginx", "FastAPI", "PostgreSQL"],
+      icon: "code",
+    },
+    {
+      id: 2,
       title: "Full Stack Developer",
       company: "CJSF 90.1FM",
       date: "Apr 2025 - Present",
@@ -16,7 +25,7 @@ const ExperienceTimeline = () => {
       icon: "volunteer",
     },
     {
-      id: 2,
+      id: 3,
       title: "Sales Colleague",
       company: "JYSK Canada",
       date: "Jul 2022 - Sept 2023",
@@ -24,15 +33,6 @@ const ExperienceTimeline = () => {
       skills: ["Teamwork", "Communication", "Customer Service"],
       icon: "work",
     },
-    // {
-    //   id: 3,
-    //   title: "Frontend Developer",
-    //   company: "Student Project",
-    //   date: "September 2023 - December 2023",
-    //   description: "Led frontend development for a student project creating a community platform. Implemented responsive design and user authentication features.",
-    //   skills: ["React", "Tailwind CSS", "JavaScript"],
-    //   icon: "code",
-    // },
     // {
     //   id: 4,
     //   title: "Volunteer Developer",
