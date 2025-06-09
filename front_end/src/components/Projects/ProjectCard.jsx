@@ -100,7 +100,7 @@ const ProjectCard = () => {
       key2: "AWS (S3, RDS)",
       key3: "Express.js",
       type: "View On Github",
-      link: "https://github.com/Priyanshsarvaiya/Food-Connect",
+      link: "https://github.com/p-north/Food-Connect",
     },
     
   ].sort((a, b) => {
