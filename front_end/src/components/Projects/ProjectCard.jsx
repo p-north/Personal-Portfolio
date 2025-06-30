@@ -6,6 +6,7 @@ import Mindstream from "../../assets/minstreamai.png"
 import rottify from "../../assets/rottify.jpg"
 import clickRegret from "../../assets/click_regret.png"
 import foodConnect from "../../assets/foodconnect.png"
+import networking from "../../assets/networking_game.jpg"
 
 
 
@@ -92,6 +93,20 @@ const ProjectCard = () => {
     {
       id: 7,
       date: "Apr 2025",
+      title: "Multiplayer Networking Game",
+      description:
+        "FoodConnect is a dynamic web platform designed to bridge the gap between food donors and recipients. It offers a streamlined marketplace for food donations, a real-time chat system powered by web sockets, and advanced filtering tools to ensure equitable access to food for individuals and communities in need.",
+      imag: networking,
+      key1: "Python",
+      key2: "TCP/UDP Protocol",
+      key3: "Pygame",
+      type: "View On Github",
+      link: "https://github.com/p-north/371-Project",
+    },
+    
+    {
+      id: 8,
+      date: "May 2025",
       title: "FoodConnect",
       description:
         "FoodConnect is a dynamic web platform designed to bridge the gap between food donors and recipients. It offers a streamlined marketplace for food donations, a real-time chat system powered by web sockets, and advanced filtering tools to ensure equitable access to food for individuals and communities in need.",
