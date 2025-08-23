@@ -24,18 +24,25 @@ const EducationCards = () => {
   const certifications = [
     {
       id: 1,
+      name: "AWS Introduction to Cloud 101",
+      issuer: "Amazon Web Services",
+      date: "Aug 2025",
+      skills: ["AWS S3", "AWS RDS", "AWS EC2","AWS Lambda"]
+    },
+    {
+      id: 2,
       name: "SQL (Intermediate) Certificate",
       issuer: "HackeRank",
       date: "Feb 2025",
       skills: ["SQL", "MySQL", "PostgreSQL"]
     },
     {
-        id: 2,
-        name: "Machine Learning",
-        issuer: "MathWorks",
-        date: "Dec 2024",
-        skills: ["Neural Networks", "MatLab", "Machine Learning"]
-    }
+      id: 3,
+      name: "Machine Learning",
+      issuer: "MathWorks",
+      date: "Dec 2024",
+      skills: ["Neural Networks", "MatLab", "Machine Learning"]
+    },
   ];
   
   return (
@@ -94,33 +101,68 @@ const EducationCards = () => {
         
         {/* Certifications */}
         <h2 className="text-2xl font-semibold mb-6">Professional Certifications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
-          {certifications.map((cert) => (
-            <div 
-              key={cert.id}
-              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold text-gray-900">{cert.name}</h3>
-                <div className="bg-indigo-50 text-indigo-700 rounded-full px-3 py-1 text-xs font-medium">
-                  {cert.date}
+        <div className="w-full max-w-4xl">
+          {/* Top row - 2 certifications */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {certifications.slice(0, 2).map((cert) => (
+              <div 
+                key={cert.id}
+                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900">{cert.name}</h3>
+                  <div className="bg-indigo-50 text-indigo-700 rounded-full px-3 py-1 text-xs font-medium">
+                    {cert.date}
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4 flex items-center gap-2">
+                  <CodeIcon fontSize="small" /> {cert.issuer}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {cert.skills.map((skill, idx) => (
+                    <span 
+                      key={idx} 
+                      className="text-xs font-medium bg-gray-100 text-gray-700 rounded-full px-3 py-1"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <p className="text-gray-600 mb-4 flex items-center gap-2">
-                <CodeIcon fontSize="small" /> {cert.issuer}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {cert.skills.map((skill, idx) => (
-                  <span 
-                    key={idx} 
-                    className="text-xs font-medium bg-gray-100 text-gray-700 rounded-full px-3 py-1"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+            ))}
+          </div>
+          
+          {/* Bottom row - 1 certification centered */}
+          <div className="flex justify-center">
+            <div className="w-full md:w-1/2">
+              {certifications.slice(2).map((cert) => (
+                <div 
+                  key={cert.id}
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-gray-900">{cert.name}</h3>
+                    <div className="bg-indigo-50 text-indigo-700 rounded-full px-3 py-1 text-xs font-medium">
+                      {cert.date}
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4 flex items-center gap-2">
+                    <CodeIcon fontSize="small" /> {cert.issuer}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {cert.skills.map((skill, idx) => (
+                      <span 
+                        key={idx} 
+                        className="text-xs font-medium bg-gray-100 text-gray-700 rounded-full px-3 py-1"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
