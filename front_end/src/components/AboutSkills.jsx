@@ -12,16 +12,19 @@ const AboutSkills = () => {
   const skills = {
     languages: [
       { name: "Python", icon: "https://skillicons.dev/icons?i=python" },
+      { name: "Java", icon: "https://skillicons.dev/icons?i=java" },
       { name: "C++", icon: "https://skillicons.dev/icons?i=cpp" },
       { name: "C", icon: "https://skillicons.dev/icons?i=c" },
       { name: "JavaScript", icon: "https://skillicons.dev/icons?i=js" },
       { name: "TypeScript", icon: "https://skillicons.dev/icons?i=ts" },
       { name: "HTML", icon: "https://skillicons.dev/icons?i=html" },
       { name: "CSS", icon: "https://skillicons.dev/icons?i=css" },
+      { name: "Bash", icon: "https://skillicons.dev/icons?i=bash" },
     ],
     frameworks: [
       { name: "React.js", icon: "https://skillicons.dev/icons?i=react" },
       { name: "Next.js", icon: "https://skillicons.dev/icons?i=next" },
+      { name: "Spring", icon: "https://skillicons.dev/icons?i=spring" },
       { name: "Node.js", icon: "https://skillicons.dev/icons?i=nodejs" },
       { name: "Express.js", icon: "https://skillicons.dev/icons?i=expressjs" },
       { name: "FastAPI", icon: "https://skillicons.dev/icons?i=fastapi" },
@@ -29,6 +32,7 @@ const AboutSkills = () => {
     ],
     tools: [
       { name: "Postman", icon: "https://skillicons.dev/icons?i=postman" },
+      { name: "NGINX", icon: "https://skillicons.dev/icons?i=nginx" },
       { name: "VsCode", icon: "https://skillicons.dev/icons?i=vscode" },
       { name: "AWS", icon: "https://skillicons.dev/icons?i=aws" },
       { name: "Firebase", icon: "https://skillicons.dev/icons?i=firebase" },
