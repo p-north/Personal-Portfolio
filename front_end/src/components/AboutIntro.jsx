@@ -10,10 +10,12 @@ const AboutIntro = () => {
     <div>
       <section className='py-20 bg-gray-50'>
         <div className='flex flex-wrap mx-auto items-center justify-center px-4 sm:px-6 max-w-7xl lg:px-8'>
+            <div className='flex justify-between'>
+              
             <div>
             <h1 className='text-3xl font-bold  md:text-4xl'>A Bit About Me!</h1>
             <p className='my-4 text-lg max-w-4xl leading-relaxed text-left'>Hi there, my name is Puneet North and I'm an undergraduate student at Simon Fraser University.</p>
-            <p className='my-4 text-lg max-w-4xl leading-relaxed text-left'>Currently in 2nd year, pursuing a Computing Science degree with a concentration in Artifical Intelligence.</p>
+            <p className='my-4 text-lg max-w-4xl leading-relaxed text-left'>Currently in my 3rd year, pursuing a Computing Science degree with a concentration in Artifical Intelligence.</p>
             <div>
 
                 <h2 className='text-lg font-bold'>Some of my favourite activites outside of coding:</h2>
@@ -39,7 +41,8 @@ const AboutIntro = () => {
             </div>
             </div>
             <div className=''>
-                <img src={profilePic} alt="profilePic" className='h-60 w-60 rounded-md shadow-lg flex-shrink-0 min-w-[240px]border-4 border-gray-200 hover:scale-105 transition-transform brightness-95 cursor-pointer'/>
+                <img src={profilePic} alt="profilePic" className='h-80 w-100 rounded-md shadow-lg hover:scale-105 transition-transform brightness-95 cursor-pointer'/>
+            </div>
             </div>
         </div>
       </section>
